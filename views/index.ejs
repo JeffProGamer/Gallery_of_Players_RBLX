@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roblox Photo Gallery</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>📸 Roblox Camera Captures</h1>
+  <div class="gallery">
+    <% uploads.forEach(upload => { %>
+      <div class="card">
+        <a href="https://www.roblox.com/users/<%= upload.userId %>/profile" target="_blank">
+          <img class="avatar" src="/avatars/<%= upload.userId %>.png" alt="Avatar">
+        </a>
+        <div class="info">
+          <p><strong><%= upload.playerName %></strong></p>
+          <p><small><%= upload.time %></small></p>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+</body>
+</html>
